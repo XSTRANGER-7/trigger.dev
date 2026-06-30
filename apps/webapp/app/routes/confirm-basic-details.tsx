@@ -241,7 +241,10 @@ export default function Page() {
   return (
     <AppContainer className="bg-charcoal-900">
       <BackgroundWrapper>
-        <MainCenteredContainer variant="onboarding" className="max-w-[29rem] rounded-lg border border-grid-bright bg-background-dimmed p-5 shadow-lg">
+        <MainCenteredContainer
+          variant="onboarding"
+          className="max-w-[29rem] rounded-lg border border-grid-bright bg-background-dimmed p-5 shadow-lg"
+        >
           <Form method="post" {...getFormProps(form)}>
             <FormTitle
               title="Welcome to Trigger.dev"
@@ -311,7 +314,10 @@ export default function Page() {
                 </InputGroup>
               ) : (
                 <>
-                  <input {...getInputProps(confirmEmail, { type: "hidden", value: false })} value={user.email} />
+                  <input
+                    {...getInputProps(confirmEmail, { type: "hidden", value: false })}
+                    value={user.email}
+                  />
                 </>
               )}
 
