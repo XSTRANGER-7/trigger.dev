@@ -1,5 +1,5 @@
 import { getFormProps, getInputProps, useForm } from "@conform-to/react";
-import { conformZodMessage, parseWithZod } from "@conform-to/zod";
+import { conformZodMessage, parseWithZod } from "@conform-to/zod/v4";
 import { ArrowRightIcon, EnvelopeIcon, UserIcon } from "@heroicons/react/20/solid";
 import { HandRaisedIcon } from "@heroicons/react/24/solid";
 import { RadioGroup } from "@radix-ui/react-radio-group";
@@ -241,10 +241,7 @@ export default function Page() {
   return (
     <AppContainer className="bg-charcoal-900">
       <BackgroundWrapper>
-        <MainCenteredContainer
-          variant="onboarding"
-          className="max-w-[29rem] rounded-lg border border-grid-bright bg-background-dimmed p-5 shadow-lg"
-        >
+        <MainCenteredContainer variant="onboarding" className="max-w-[29rem] rounded-lg border border-grid-bright bg-background-dimmed p-5 shadow-lg">
           <Form method="post" {...getFormProps(form)}>
             <FormTitle
               title="Welcome to Trigger.dev"
@@ -314,7 +311,7 @@ export default function Page() {
                 </InputGroup>
               ) : (
                 <>
-                  <input {...getInputProps(confirmEmail, { type: "hidden" })} value={user.email} />
+                  <input {...getInputProps(confirmEmail, { type: "hidden", value: false })} value={user.email} />
                 </>
               )}
 
