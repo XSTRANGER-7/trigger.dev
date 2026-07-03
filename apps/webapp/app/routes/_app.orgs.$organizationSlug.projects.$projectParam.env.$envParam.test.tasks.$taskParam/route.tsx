@@ -448,8 +448,6 @@ function StandardTaskForm({
   });
   const {
     environmentId,
-    payload,
-    metadata,
     taskIdentifier,
     delaySeconds,
     ttlSeconds,
