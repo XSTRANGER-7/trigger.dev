@@ -48,7 +48,6 @@ overrides:
   brace-expansion@>=2 <2.0.3: 2.0.3
   brace-expansion@>=5 <5.0.6: 5.0.6
   zod: 4.4.3
-  '@trigger.dev/platform>zod': 3.23.8
 
 patchedDependencies:
   '@changesets/assemble-release-plan@5.2.4':
@@ -575,8 +574,8 @@ importers:
         specifier: workspace:*
         version: link:../../internal-packages/otlp-importer
       '@trigger.dev/platform':
-        specifier: 1.0.29
-        version: 1.0.29
+        specifier: 1.2.0
+        version: 1.2.0(zod@4.4.3)
       '@trigger.dev/plugins':
         specifier: workspace:*
         version: link:../../packages/plugins
@@ -8495,8 +8494,10 @@ packages:
       react: 18.3.1
       react-dom: 18.3.1
 
-  '@trigger.dev/platform@1.0.29':
-    resolution: {integrity: sha512-75lsz0igwY9tqWfT6U7Huj+94VWic3//B4Cux4muCzH/ZC8Hz22O9fsMe+R7JtQy7HsemG42R+Zwy5ITnSgFYg==}
+  '@trigger.dev/platform@1.2.0':
+    resolution: {integrity: sha512-Wa/XlMlmo1vhol5DEBYW1gMW4wgUUqr/ClDQb4IgwrRdPeLLmTpIVsgMHmYJXkERqR04xVaX7wBibWl4sW+1Hg==}
+    peerDependencies:
+      zod: 4.4.3
 
   '@types/acorn@4.0.6':
     resolution: {integrity: sha512-veQTnWP+1D/xbxVrPC3zHnCZRjSrKfhbMUlEA43iMZLu7EsnTtkJklIuwrCPbOi8YkvDQAiW05VQQFvvz9oieQ==}
@@ -16966,9 +16967,6 @@ packages:
     peerDependencies:
       zod: 4.4.3
 
-  zod@3.23.8:
-    resolution: {integrity: sha512-XBx9AXhXktjUqnepgTiE5flcKIYWi/rme0Eaj+5Y0lftuGBq+jyRu/md4WnuxqgP1ubdpNCsYEYPxrzVHD8d6g==}
-
   zod@4.4.3:
     resolution: {integrity: sha512-ytENFjIJFl2UwYglde2jchW2Hwm4GJFLDiSXWdTrJQBIN9Fcyp7n4DhxJEiWNAJMV1/BqWfW/kkg71UDcHJyTQ==}
 
@@ -19662,7 +19660,7 @@ snapshots:
 
   '@epic-web/test-server@0.1.0(bufferutil@4.0.9)':
     dependencies:
-      '@hono/node-server': 1.12.2(hono@4.12.15)
+      '@hono/node-server': 1.12.2(hono@4.5.11)
       '@hono/node-ws': 1.0.4(@hono/node-server@1.12.2(hono@4.5.11))(bufferutil@4.0.9)
       '@open-draft/deferred-promise': 2.2.0
       '@types/ws': 8.5.12
@@ -20477,9 +20475,9 @@ snapshots:
     dependencies:
       react: 18.3.1
 
-  '@hono/node-server@1.12.2(hono@4.12.15)':
+  '@hono/node-server@1.12.2(hono@4.5.11)':
     dependencies:
-      hono: 4.12.15
+      hono: 4.5.11
 
   '@hono/node-server@1.19.9(hono@4.11.8)':
     dependencies:
@@ -20491,7 +20489,7 @@ snapshots:
 
   '@hono/node-ws@1.0.4(@hono/node-server@1.12.2(hono@4.5.11))(bufferutil@4.0.9)':
     dependencies:
-      '@hono/node-server': 1.12.2(hono@4.12.15)
+      '@hono/node-server': 1.12.2(hono@4.5.11)
       ws: 8.20.1(bufferutil@4.0.9)
     transitivePeerDependencies:
       - bufferutil
@@ -25183,9 +25181,9 @@ snapshots:
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
 
-  '@trigger.dev/platform@1.0.29':
+  '@trigger.dev/platform@1.2.0(zod@4.4.3)':
     dependencies:
-      zod: 3.23.8
+      zod: 4.4.3
 
   '@types/acorn@4.0.6':
     dependencies:
@@ -35183,8 +35181,6 @@ snapshots:
   zod-validation-error@5.0.0(zod@4.4.3):
     dependencies:
       zod: 4.4.3
-
-  zod@3.23.8: {}
 
   zod@4.4.3: {}
 
